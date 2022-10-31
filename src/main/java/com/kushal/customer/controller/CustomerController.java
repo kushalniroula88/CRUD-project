@@ -30,11 +30,7 @@ public class CustomerController {
         customerService.deleteByCustomerId(id);
         return new ResponseEntity<>(HttpStatus.GONE);
     }
-//    @GetMapping("/{name}")
-//    public ResponseEntity<>getByCustomerName(@PathVariable("name") String name){
-//        return customerService.getByCustomerName(name);
-//        return new ResponseEntity<>(HttpStatus.FOUND);
-//    }
+
     @GetMapping
     private List<Customer>getAllCustomers(){
         return customerService.getAllCustomers();
